@@ -1,0 +1,8 @@
+main .center .content {
+  overflow-y: auto;
+}
+@media screen and (max-width: 800px) {
+  main .center .content {
+    overflow: auto;
+  }
+}
