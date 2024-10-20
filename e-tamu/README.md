@@ -1,6 +1,6 @@
 # E-Tamu
 
-E-Tamu adalah sistem manajemen untuk mencatat kehadiran tamu secara digital. Proyek ini bertujuan untuk memudahkan pencatatan data tamu dan menyediakan laporan kehadiran yang efisien.
+E-Tamu adalah sistem manajemen untuk mencatat kehadiran tamu secara digital. Proyek ini bertujuan untuk memudahkan pencatatan data tamu dan menyediakan laporan kehadiran yang efisien. Dibuat menggunakan Laravel versi 10.
 
 ## Fitur
 
