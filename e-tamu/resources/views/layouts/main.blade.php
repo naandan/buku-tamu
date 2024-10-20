@@ -6,17 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{ $title }}</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
   </head>
   <body>
     <header>
       <div class="container">
         <div class="logo">
           <div class="img" style="opacity: 1;">
-            <img src="img/Logo.png"  alt="Logo SMKN 1 KAWALI" />
+            <img src="{{ asset('img/Logo.png') }}"  alt="Logo SMKN 1 KAWALI" />
           </div>
           <div class="img" style="opacity: 0; position: absolute;">
-            <img src="img/Logo JAWA BARAT.png" alt="Logo JAWA BARAT" />
+            <img src="{{ asset('img/Logo JAWA BARAT.png') }}" alt="Logo JAWA BARAT" />
           </div>
           <div class="text">
             <h3>SMK NEGERI 1 KAWALI</h3>
@@ -40,14 +40,14 @@
     <div class="side-menu hidden">
       <div class="menu">
         <h3>BUKU TAMU</h3>
-        <a href="{{ route('index') }}" class="active">Home</a>
-        <a href="{{ route('grafik') }}" class="">Grafik Tamu</a>
-        <a href="{{ route('data') }}" class="">Data Tamu</a>
-        <a href="{{ route('admin') }}" class="">Admin</a>
+        <a href="{{ route('index') }}" class="{{ Request::routeIs('index') ? 'active' : '' }}">Home</a>
+        <a href="{{ route('grafik') }}" class="{{ Request::routeIs('grafik') ? 'active' : '' }}">Grafik Tamu</a>
+        <a href="{{ route('data') }}" class="{{ Request::routeIs('data') ? 'active' : '' }}">Data Tamu</a>
+        <a href="{{ route('admin') }}" class="{{ Request::routeIs('admin') ? 'active' : '' }}">Admin</a>
       </div>
     </div>
 
     @yield('contents')
-    <script src="js/script.js"></script>
+    <script src="{{ asset('js/script.js') }}"></script>
   </body>
 </html>

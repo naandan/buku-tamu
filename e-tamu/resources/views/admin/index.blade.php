@@ -72,7 +72,7 @@
             <div class="dropdown">
               <button class="btn btn-transparent text-white p-0" type="button" data-coreui-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <svg class="icon">
-                  <use xlink:href="vendor/@coreui/icons/svg/free.svg#cil-options"></use>
+                  <use xlink:href="{{ asset('vendor/@coreui/icons/svg/free.svg#cil-options') }}"></use>
                 </svg>
               </button>
               <div class="dropdown-menu dropdown-menu-end"><a class="dropdown-item" href="#">Action</a><a class="dropdown-item" href="#">Another action</a><a class="dropdown-item" href="#">Something else here</a></div>
@@ -96,15 +96,15 @@
           <div class="d-none d-md-flex gap-2 align-items-center">
             <h6 class="">Download Excel 
               <svg class="icon">
-                <use xlink:href="vendor/@coreui/icons/svg/free.svg#cil-caret-right"></use>
+                <use xlink:href="{{ asset('vendor/@coreui/icons/svg/free.svg#cil-caret-right') }}"></use>
               </svg>
             </h6>
             <div class="btn-toolbar d-none d-md-block" role="toolbar" aria-label="Toolbar with buttons">
               <form action="" method="POST">
-                <input type="hidden" name="query" value="" >
+                @csrf
                 <button class="btn btn-primary" type="submit">
                   <svg class="icon">
-                    <use xlink:href="vendor/@coreui/icons/svg/free.svg#cil-cloud-download"></use>
+                    <use xlink:href="{{ asset('vendor/@coreui/icons/svg/free.svg#cil-cloud-download') }}"></use>
                   </svg>
                 </button>
               </form>

@@ -49,19 +49,19 @@ Route::get('/result', function () {
     ]);
 })->name('result');
 
-Route::post('/', [TamuController::class, 'store']);
+Route::post('/', [TamuController::class, 'store'])->name('store');
 
 
 
 Route::get('/admin', [TamuController::class, 'index'])->name('admin')->middleware('auth');
-Route::get('/admin.data', [TamuController::class, 'data'])->name('admin_data')->middleware('auth');
-Route::post('/admin.data', [TamuController::class, 'data'])->name('admin_data')->middleware('auth');
+Route::get('/admin/data', [TamuController::class, 'data'])->name('admin_data')->middleware('auth');
+Route::post('/admin/data', [TamuController::class, 'data'])->name('admin_data')->middleware('auth');
 
 Route::get('/login', function () {
     return view('auth.login',[
         'title' => 'Buku Tamu'
     ]);
 })->name('login');
-Route::post('/login', [AuthController::class, 'login']);
-Route::post('/logout', [AuthController::class, 'logout']);
+Route::post('/login', [AuthController::class, 'login'])->name('login');
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 

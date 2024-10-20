@@ -65,7 +65,7 @@
                 }
                 ?> >Semua</option>
               </select>
-              <button type="submit" name="filter" hidden>Filter</button>
+              <button type="submit" name="filter" class="btn btn-primary mt-2 d-none">Filter</button>
             </form>
           </div>
         </div>
@@ -90,21 +90,21 @@
                             <td>{{ $d->nama }}</td>
                             <td>{{ $d->instansi }}</td>
                             <td>{{ $d->pesan }}</td>
-                            <td><a data-bs-toggle="modal" data-bs-target="#fotoModal" class="text-primary" onclick="lihatFoto('storage/images/{{ $d->foto }}')"><u>Lihat</u></a></td>
-                            <td>{{ $d->created_at->format('d M Y') }}</td>
+                            <td><a href="#" data-bs-toggle="modal" data-bs-target="#fotoModal" class="text-primary" onclick="lihatFoto('{{ asset('storage/images/' . $d->foto) }}')"><u>Lihat</u></a></td>
+                            <td>{{ $d->created_at->format('d M Y H:i:s') }}</td>
                           </tr>
                           @endforeach
                         </tbody>
                         <tfoot>
                             <tr>
-                                <td>No</td>
-                                <td>Nama</td>
-                                <td>Instansi</td>
-                                <td>Pesan</td>
-                                <td>Foto</td>
+                                <th>No</th>
+                                <th>Nama</th>
+                                <th>Instansi</th>
+                                <th>Pesan</th>
+                                <th>Foto</th>
                                 <th>Tanggal</th>
                             </tr>
-                        </tbody>
+                        </tfoot>
                     </table>
                 </div>
             </div>
@@ -115,7 +115,7 @@
 </div>
 <script>
   function lihatFoto(link){
-    document.getElementById('modalImg').src = link
+    document.getElementById('modalImg').src = link;
   }
 </script>
 <div class="modal fade" id="fotoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -126,7 +126,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <img src="" id="modalImg" alt="" width="100%">
+        <img src="" id="modalImg" alt="Gambar" width="100%">
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kembali</button>

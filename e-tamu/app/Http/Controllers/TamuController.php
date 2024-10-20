@@ -53,6 +53,8 @@ class TamuController extends Controller
         }elseif($request->from){
             $data = Tamu::whereBetween('created_at', [$request->from.'%', $request->to.'%'])->get();
         }
+
+        $data = $data->sortByDesc('created_at');
         return view('admin.data',[
             'title' => 'Buku Tamu',
             'data' => $data
@@ -79,6 +81,9 @@ class TamuController extends Controller
         ]);
 
         if ($request->foto){
+            if (!file_exists(public_path('storage/images'))) {
+                mkdir(public_path('storage/images'), 0777, true);
+            }
             $folderPath = public_path('storage/images/');
             $image_parts = explode(";base64,", $request->foto);
             $image_type_aux = explode("image/", $image_parts[0]);

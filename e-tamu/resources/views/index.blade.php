@@ -91,23 +91,34 @@
   let foto = document.querySelector("#foto");
 
   start_button.addEventListener('click', async function(e) {
-      e.preventDefault()
-      let stream = await navigator.mediaDevices.getUserMedia({ video: { width: 350, height: 200 }, audio: false });
-    video.srcObject = stream;
+      e.preventDefault();
+      try {
+          let stream = await navigator.mediaDevices.getUserMedia({ video: { width: 350, height: 200 }, audio: false });
+          video.srcObject = stream;
+          // Flip the video horizontally
+          video.style.transform = 'scaleX(-1)';
+      } catch (error) {
+          console.error("Error accessing the camera:", error);
+      }
   });
-  // repeat_button.addEventListener('click', async function(e) {
-  //     e.preventDefault()
-  //     let stream = await navigator.mediaDevices.getUserMedia({ video: true, audio: false });
-  //   video.srcObject = stream;
-  // });
 
   shot_button.addEventListener('click', function(e) {
-      e.preventDefault()
-      canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
-      let image_data_url = canvas.toDataURL('image/jpeg');
+      e.preventDefault();
+      let context = canvas.getContext('2d');
+      
+      // Flip the canvas horizontally before drawing
+      context.scale(-1, 1);
+      context.translate(-canvas.width, 0);
+      
+      // Draw the video frame
+      context.drawImage(video, 0, 0, canvas.width, canvas.height);
+      
+      // Reset the canvas transform
+      context.setTransform(1, 0, 0, 1, 0, 0);
 
-      // data url of the image
-      foto.value = image_data_url
+      // Get the data URL of the image
+      let image_data_url = canvas.toDataURL('image/jpeg');
+      foto.value = image_data_url;
   });
 </script>
 <script>
