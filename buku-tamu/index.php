@@ -1,3 +1,3 @@
 <?php 
-header("Location: Public")
+header("Location: public/index.php")
 ?>

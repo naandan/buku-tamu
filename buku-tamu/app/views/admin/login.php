@@ -11,18 +11,15 @@ if(isset($_SESSION['login'])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
     <title>Admin | Login</title>
-    <link rel="manifest" href="assets/favicon/manifest.json" />
-    <meta name="msapplication-TileColor" content="#ffffff" />
-    <meta name="msapplication-TileImage" content="assets/favicon/ms-icon-144x144.png" />
     <meta name="theme-color" content="#ffffff" />
     <!-- Vendors styles-->
-    <link rel="stylesheet" href="../../../public/vendors/simplebar/css/simplebar.css" />
-    <link rel="stylesheet" href="../../../public/vendors/css/vendors/simplebar.css" />
+    <link rel="stylesheet" href="/public/vendor/simplebar/css/simplebar.css" />
+    <link rel="stylesheet" href="/public/vendor/css/vendors/simplebar.css" />
     <!-- Main styles for this application-->
-    <link href="../../../public/vendors/css/style.css" rel="stylesheet" />
+    <link href="/public/vendor/css/style.css" rel="stylesheet" />
     <!-- We use those styles to show code examples, you should remove them in your application.-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism.css" />
-    <link href="../../../public/vendors/css/examples.css" rel="stylesheet" />
+    <link href="/public/vendor/css/examples.css" rel="stylesheet" />
     <!-- Global site tag (gtag.js) - Google Analytics-->
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-118965717-3"></script>
     <script>
@@ -60,7 +57,7 @@ if(isset($_SESSION['login'])){
                     <div class="input-group mb-3">
                       <span class="input-group-text">
                         <svg class="icon">
-                          <use xlink:href="../../../public/vendors/@coreui/icons/svg/free.svg#cil-user"></use>
+                          <use xlink:href="/public/vendor/@coreui/icons/svg/free.svg#cil-user"></use>
                           </svg>
                     </span>
                       <input class="form-control" type="text" placeholder="Username" name="username" />
@@ -68,7 +65,7 @@ if(isset($_SESSION['login'])){
                     <div class="input-group mb-4">
                       <span class="input-group-text">
                         <svg class="icon">
-                          <use xlink:href="../../../public/vendors/@coreui/icons/svg/free.svg#cil-lock-locked"></use>
+                          <use xlink:href="/public/vendor/@coreui/icons/svg/free.svg#cil-lock-locked"></use>
                           </svg>
                         </span>
                       <input class="form-control" type="password" placeholder="Password" name="password"/>
@@ -89,8 +86,8 @@ if(isset($_SESSION['login'])){
         </div>
       </div>
     </div>
-    <script src="../../../public/vendors/@coreui/coreui/js/coreui.bundle.min.js"></script>
-    <script src="../../../public/vendors/simplebar/js/simplebar.min.js"></script>
+    <script src="/public/vendor/@coreui/coreui/js/coreui.bundle.min.js"></script>
+    <script src="/public/vendor/simplebar/js/simplebar.min.js"></script>
     <script></script>
   </body>
 </html>

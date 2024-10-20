@@ -19,13 +19,13 @@ if(!isset($_SESSION['login'])){
     <meta name="msapplication-TileImage" content="assets/favicon/ms-icon-144x144.png" />
     <meta name="theme-color" content="#ffffff" />
     <!-- Vendors styles-->
-    <link rel="stylesheet" href="../../../public/vendors/simplebar/css/simplebar.css" />
-    <link rel="stylesheet" href="../../../public/vendors/css/vendors/simplebar.css" />
+    <link rel="stylesheet" href="/public/vendor/simplebar/css/simplebar.css" />
+    <link rel="stylesheet" href="/public/vendor/css/vendors/simplebar.css" />
     <!-- Main styles for this application-->
-    <link href="../../../public/vendors/css/style.css" rel="stylesheet" />
+    <link href="/public/vendor/css/style.css" rel="stylesheet" />
     <!-- We use those styles to show code examples, you should remove them in your application.-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism.css" />
-    <link href="../../../public/vendors/css/examples.css" rel="stylesheet" />
+    <link href="/public/vendor/css/examples.css" rel="stylesheet" />
     <!-- Global site tag (gtag.js) - Google Analytics-->
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-118965717-3"></script>
     <script>
@@ -40,7 +40,7 @@ if(!isset($_SESSION['login'])){
       // Bootstrap ID
       gtag("config", "UA-118965717-5");
     </script>
-    <link href="../../../public/vendors/@coreui/chartjs/css/coreui-chartjs.css" rel="stylesheet" />
+    <link href="/public/vendor/@coreui/chartjs/css/coreui-chartjs.css" rel="stylesheet" />
   </head>
   <body>
     <div class="data-chart">
@@ -62,13 +62,13 @@ if(!isset($_SESSION['login'])){
         <li class="nav-item">
           <a class="nav-link" href="index.php">
             <svg class="nav-icon">
-              <use xlink:href="../../../public/vendors/@coreui/icons/svg/free.svg#cil-home"></use>
+              <use xlink:href="/public/vendor/@coreui/icons/svg/free.svg#cil-home"></use>
             </svg>
             Home</a
           >
           <a class="nav-link" href="data.php">
             <svg class="nav-icon">
-              <use xlink:href="../../../public/vendors/@coreui/icons/svg/free.svg#cil-chart"></use>
+              <use xlink:href="/public/vendor/@coreui/icons/svg/free.svg#cil-chart"></use>
             </svg>
             Data Tamu</a
           >
@@ -80,7 +80,7 @@ if(!isset($_SESSION['login'])){
         <div class="container-fluid">
           <button class="header-toggler px-md-0 me-md-3" type="button" onclick="coreui.Sidebar.getInstance(document.querySelector('#sidebar')).toggle()">
             <svg class="icon icon-lg">
-              <use xlink:href="../../../public/vendors/@coreui/icons/svg/free.svg#cil-menu"></use>
+              <use xlink:href="/public/vendor/@coreui/icons/svg/free.svg#cil-menu"></use>
             </svg></button>
           <a class="header-brand d-md-none" href="#">
             <h5 class="mt-2">Buku Tamu K-ONE</h5>  
@@ -91,7 +91,7 @@ if(!isset($_SESSION['login'])){
           <ul class="header-nav ms-auto">
             <li class="nav-item dropdown">
               <a class="nav-link py-0" data-coreui-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                <div class="avatar avatar-md"><img class="avatar-img" src="../../../public/vendors/assets/img/avatars/8.jpg" alt="user@email.com" /></div>
+                <div class="avatar avatar-md"><img class="avatar-img" src="/public/img/user.png" alt="user@email.com" /></div>
               </a>
               <div class="dropdown-menu dropdown-menu-end pt-0">
                 <div class="dropdown-header bg-light py-2">
@@ -99,7 +99,7 @@ if(!isset($_SESSION['login'])){
                 </div>
                 <a class="dropdown-item" href="logout.php">
                   <svg class="icon me-2">
-                    <use xlink:href="../../../public/vendors/@coreui/icons/svg/free.svg#cil-account-logout"></use>
+                    <use xlink:href="/public/vendor/@coreui/icons/svg/free.svg#cil-account-logout"></use>
                   </svg>
                   Logout</a
                 >
@@ -218,7 +218,7 @@ if(!isset($_SESSION['login'])){
                 <div class="d-none d-md-flex gap-2 align-items-center">
                   <h6 class="">Download Excel 
                     <svg class="icon">
-                      <use xlink:href="../../../public/vendors/@coreui/icons/svg/free.svg#cil-caret-right"></use>
+                      <use xlink:href="/public/vendor/@coreui/icons/svg/free.svg#cil-caret-right"></use>
                     </svg>
                   </h6>
                   <div class="btn-toolbar d-none d-md-block" role="toolbar" aria-label="Toolbar with buttons">
@@ -226,7 +226,7 @@ if(!isset($_SESSION['login'])){
                       <input type="hidden" name="query" value="<?= "SELECT * FROM tb_tamu WHERE timestamp LIKE '$year%'" ?>" >
                       <button class="btn btn-primary" type="submit">
                         <svg class="icon">
-                          <use xlink:href="../../../public/vendors/@coreui/icons/svg/free.svg#cil-cloud-download"></use>
+                          <use xlink:href="/public/vendor/@coreui/icons/svg/free.svg#cil-cloud-download"></use>
                         </svg>
                       </button>
                     </form>
@@ -245,12 +245,12 @@ if(!isset($_SESSION['login'])){
       </footer>
     </div>
     <!-- CoreUI and necessary plugins-->
-    <script src="../../../public/vendors/@coreui/coreui/js/coreui.bundle.min.js"></script>
-    <script src="../../../public/vendors/simplebar/js/simplebar.min.js"></script>
+    <script src="/public/vendor/@coreui/coreui/js/coreui.bundle.min.js"></script>
+    <script src="/public/vendor/simplebar/js/simplebar.min.js"></script>
     <!-- Plugins and scripts required by this view-->
-    <script src="../../../public/vendors/chart.js/js/chart.min.js"></script>
-    <script src="../../../public/vendors/@coreui/chartjs/js/coreui-chartjs.js"></script>
-    <script src="../../../public/vendors/@coreui/utils/js/coreui-utils.js"></script>
-    <script src="../../../public/vendors/js/main.js"></script>
+    <script src="/public/vendor/chart.js/js/chart.min.js"></script>
+    <script src="/public/vendor/@coreui/chartjs/js/coreui-chartjs.js"></script>
+    <script src="/public/vendor/@coreui/utils/js/coreui-utils.js"></script>
+    <script src="/public/vendor/js/main.js"></script>
   </body>
 </html>
